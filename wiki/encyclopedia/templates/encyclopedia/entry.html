@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block body %}
+
+    {{ entry | safe }}
+
+
+    <!-- Django href -->
+    <!-- url  'name of url' variable(only if needed)  -->
+    <a href="{% url 'edit' title %}" class="btn btn-success">Edit</a>
+    
+{% endblock %}
+
+
